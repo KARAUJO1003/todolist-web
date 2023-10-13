@@ -7,7 +7,7 @@
     --light-color-primary:rgb(248, 248, 248);
     --light-color-secondary:#f0f8ff;
     --green-color-primary: #2f4f4f;
-    --green-color-secondary: #386d6d;
+    --green-color-secondary: #133030;
     
     /*dark-mode*/
     
@@ -30,10 +30,22 @@
     justify-content: center;
     border: none;
     color: var(--light-color-primary);
+    box-shadow: 3px 3px 6px -1px #111;
+
+}
+
+.theme-mode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
     position: absolute;
     z-index: 8;
     right: 3rem;
     top: 2rem;
+}
+.theme-mode label{
+    color: #eee;
 }
 
 *{
@@ -62,7 +74,6 @@ body{
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
     color: var(--light-color-primary);
     z-index: 1;
 }
@@ -73,6 +84,7 @@ font-weight: 700;
 
 .imgBackground h1{
     color: #f0f8ff;
+    margin-top: 120px;
 }
 
 
@@ -81,9 +93,9 @@ font-weight: 700;
     position: absolute;
     width: 40%;
     min-width: 300px;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--light-color-primary);
-    border-radius: 1rem;
+    border-radius:30px;
     filter: drop-shadow(-1px 0px 6px rgba(0, 0, 0, 0.25));
     z-index: 3;
 }
@@ -100,7 +112,7 @@ font-weight: 700;
     height: 2.5rem;
     padding-left: 10px;
     border: none;
-    border-radius: 7px;
+    border-radius: 30px;
     background-color: var(--light-color-secondary);
     color: var(--dark-color-primary);
     filter: drop-shadow(-1px 2px 6px rgba(0, 0, 0, 0.25));
@@ -115,16 +127,16 @@ font-weight: 700;
     padding: 0 15px;
     font-size: 16px;
     height: 2.5rem;
-    border-radius: 7px;
+    border-radius: 30px;
     border: none;
     background-color: var(--green-color-primary);
     color: #fff;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .2s;
     cursor: pointer;
 }
 
 .addTaskBtn:hover{
-    opacity: .7;
+    background-color: var(--green-color-secondary);
 }
 
 .listTasks{
@@ -142,8 +154,8 @@ font-weight: 700;
     gap: 1rem;
     cursor: pointer;
     transition: ease-in .1s;
-    padding: 10px;
-    border-radius: 7px;
+    padding: 1rem;
+    border-radius: 30px;
     box-sizing: border-box;
 
 }
@@ -193,4 +205,49 @@ svg{
     color: var(--dark-color-primary);
 }
 
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.65);
+    position: relative;
+}
+
+dialog{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--dark-color-primary);
+    background-color: var(--light-color-primary);
+
+}
+
+dialog button{
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: .9rem;
+    background-color: var(--green-color-primary);
+    cursor: pointer;
+    color: var(--dark-color-primary);
+    transition: .2s;
+}
+
+dialog button:hover{
+    background-color: var(--green-color-secondary);
+}
+
+dialog p{
+    margin-top: .8rem;
+}
+dialog h2{
+    color: var(--dark-color-secondary);
+}
 

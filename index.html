@@ -14,6 +14,7 @@
     
     <div class="theme-mode">
       <button class="checkbox" id="#check-box-theme"></button>
+      <label for="check-box-theme">Alterar Tema</label>
     </div>
   
   <div class="imgBackground">
@@ -22,10 +23,20 @@
   
   <div class="container">
     <div class="inputTask">
-      <input class="input-task" type="text" placeholder="Adicione sua tarefa aqui...">
+      <input class="input-task" type="text" placeholder="Add new task...">
       <button class="addTaskBtn" onclick="">Adicionar</button>
     </div>
       <ul class="listTasks"></ul>
+    </div>
+
+    <div class="box alert">
+        <dialog>
+    
+          <h2>Digite alguma tarefa</h2>
+          <p>Não é possível criar uma tarefa em branco, digite algo para continuar.</p>
+          <button class="btn-modal">Fechar</button>
+    
+        </dialog>
     </div>
     
     

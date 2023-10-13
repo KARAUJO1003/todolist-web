@@ -3,6 +3,8 @@ const input = document.querySelector ('.input-task')
 const listaCompleta = document.querySelector ('.listTasks') 
 const checkBoxMode = document.getElementById("#check-box-theme")
 const themeSystem = localStorage.getItem("themeSystem") || "light"
+const modal = document.querySelector('dialog')
+const modalClose = document.querySelector('dialog button')
 
 checkBoxMode.addEventListener('click', () => {
 
@@ -65,8 +67,13 @@ function addTask (){
       showTask();
     } else {
       // Adicione aqui a lógica para mostrar uma mensagem de erro ou fornecer feedback ao usuário.
-        alert("Digite alguma tarefa")
+        modal.showModal()
     }
+
+    modalClose.addEventListener('click', function() {
+    modal.close()
+    })
+
 }
 
 function handleEnterKey(event) {
