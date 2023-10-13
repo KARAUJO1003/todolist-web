@@ -1,5 +1,40 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    /*light-mode*/
+    --dark-color-primary: #111;
+    --light-color-primary:rgb(248, 248, 248);
+    --light-color-secondary:#f0f8ff;
+    --green-color-primary: #2f4f4f;
+    --green-color-secondary: #386d6d;
+    
+    /*dark-mode*/
+    
+}
+
+[data-theme = "dar"]{
+    --ligth-color-primary: #111;
+    --ligth-color-secondary: #1a1a1a;
+    --dark-color-primary: #rgb(248, 248, 248);
+
+}
+
+.checkbox{
+    background-color: var(--green-color-primary);
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: var(--light-color-primary);
+    position: absolute;
+    z-index: 8;
+    right: 3rem;
+    top: 2rem;
+}
 
 *{
     margin: 0;
@@ -16,6 +51,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--light-color-secondary);
+    color: var(--dark-color-primary);
 }
 
 .imgBackground{
@@ -26,11 +63,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: var(--light-color-primary);
+    z-index: 1;
 }
 .imgBackground span{
-color: #2f4f4f;
+color: var(--green-color-primary);
 font-weight: 700;
+}
+
+.imgBackground h1{
+    color: #f0f8ff;
 }
 
 
@@ -40,9 +82,10 @@ font-weight: 700;
     width: 40%;
     min-width: 300px;
     padding: 1rem;
-    background-color: rgb(248, 248, 248);
+    background-color: var(--light-color-primary);
     border-radius: 1rem;
     filter: drop-shadow(-1px 0px 6px rgba(0, 0, 0, 0.25));
+    z-index: 3;
 }
 
 .inputTask{
@@ -58,58 +101,69 @@ font-weight: 700;
     padding-left: 10px;
     border: none;
     border-radius: 7px;
+    background-color: var(--light-color-secondary);
+    color: var(--dark-color-primary);
     filter: drop-shadow(-1px 2px 6px rgba(0, 0, 0, 0.25));
+    font-size: 16px;
 }
 
 .inputTask input:focus{
-    border: 2px solid darkslategray;
+    border: 2px solid var(--green-color-primary);
 }
 
 .addTaskBtn{
     padding: 0 15px;
+    font-size: 16px;
     height: 2.5rem;
     border-radius: 7px;
     border: none;
-    background-color: #2f4f4f;
-    color: aliceblue;
+    background-color: var(--green-color-primary);
+    color: #fff;
     transition: ease-in-out .5s;
     cursor: pointer;
 }
 
 .addTaskBtn:hover{
-    background-color: #386d6d ;
+    opacity: .7;
 }
 
 .listTasks{
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap:.1rem;
 }
 
 .tasks{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 1rem;
     cursor: pointer;
     transition: ease-in .1s;
     padding: 10px;
     border-radius: 7px;
+    box-sizing: border-box;
+
 }
 
 .tasks:hover{
     filter: drop-shadow(-1px 2px 6px rgba(0, 0, 0, 0.25));
     transform: scale(1.01);
-    background-color: rgb(248, 248, 248);
+    background-color: var(--light-color-primary);
 
 }
 
+.tasks p {
+    width: 100%; /* Limita a largura máxima ao contêiner .tasks */
+    word-wrap: break-word;
+    overflow: hidden; /* Evita que o texto exceda a largura do contêiner */
+    white-space: wrap; /* Impede que o texto quebre em várias linhas horizontalmente (pode ser removido se desejado) */
+    text-overflow: ellipsis; /* Adiciona "..." no final do texto se ele for cortado (pode ser removido se desejado) */
+  }
 
-.tasks p{
-    width: 100%;
-}
-
-.tasks img{
+ img{
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -117,11 +171,26 @@ font-weight: 700;
 
 .delete-icon{
     opacity: 0;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .2s;
 }
 
 .tasks:hover .delete-icon{
     opacity: 1;
+}
+
+
+.feito{
+    text-decoration: line-through;
+}
+
+.feito p{
+    opacity: .5;
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+    color: var(--dark-color-primary);
 }
 
 
