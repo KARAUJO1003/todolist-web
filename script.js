@@ -35,16 +35,16 @@ document.documentElement.setAttribute ("data-theme", theme)
 
     if (theme === 'dark') {
       root.style.setProperty('--dark-color-primary', '#111');
-      root.style.setProperty('--light-color-primary', 'rgb(248, 248, 248');
+      root.style.setProperty('--light-color-primary', '#f0f9ff');
       root.style.setProperty('--light-color-secondary', '#f0f8ff');
       // Defina outras variáveis CSS de acordo com o tema escuro 
       /*
     --dark-color-primary: #111;
-    --light-color-primary:rgb(248, 248, 248);
+    --light-color-primary:#f0f9ff;
     --light-color-secondary:#f0f8ff;
       */
     } else {
-        root.style.setProperty('--dark-color-primary', 'rgb(248, 248, 248');
+        root.style.setProperty('--dark-color-primary', '#f0f9ff');
         root.style.setProperty('--light-color-primary', '#111');
         root.style.setProperty('--light-color-secondary', '#1a1a1a');
       // Defina outras variáveis CSS de acordo com o tema claro
