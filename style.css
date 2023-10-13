@@ -4,7 +4,7 @@
 :root{
     /*light-mode*/
     --dark-color-primary: #111;
-    --light-color-primary:rgb(248, 248, 248);
+    --light-color-primary:#f0f9ff;
     --light-color-secondary:#f0f8ff;
     --green-color-primary: #2f4f4f;
     --green-color-secondary: #133030;
@@ -19,8 +19,8 @@ html{
 
 [data-theme = "dar"]{
     --ligth-color-primary: #111;
-    --ligth-color-secondary: #1a1a1a;
-    --dark-color-primary: #rgb(248, 248, 248);
+    --ligth-color-secondary: #131313;
+    --dark-color-primary: #f0f9ff;
 
 }
 
