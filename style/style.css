@@ -68,7 +68,7 @@ body {
 .imgBackground {
     width: 100%;
     height: 300px;
-    background: url("../src/background.png") no-repeat;
+    background: url("../pages/src/background.png") no-repeat;
     position: relative;
     display: flex;
     justify-content: center;

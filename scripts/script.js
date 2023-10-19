@@ -6,14 +6,16 @@ const themeSystem = localStorage.getItem("themeSystem") || "light"
 const modal = document.querySelector('dialog')
 const modalClose = document.querySelector('dialog button')
 
-checkBoxMode.addEventListener('click', () => {
+checkBoxMode.addEventListener('click', trocarTema) 
+
+function trocarTema () {
     
     let oldTheme = localStorage.getItem("themeSystem") || "light"
     let newTheme = oldTheme == "light" ? "dark" : "light"
 
     localStorage.setItem("themeSystem", newTheme)
     defineCurrentTheme(newTheme)
-})
+}
 
 
 function defineCurrentTheme(theme){
@@ -100,7 +102,7 @@ function showTask (){
         <li class="tasks ${item.done && "feito"}">
             <span class="check-icon ${item.done && "verde"}"  onclick="checkTask(${index})">${iconSrc}</span>
             <p>${item.tarefa}</p>
-            <img class="delete-icon" src="./src/delete.png" alt="unCheck-icon" onclick="deletarItem(${index})">
+            <img class="delete-icon" src="../pages/src/delete.png" alt="unCheck-icon" onclick="deletarItem(${index})">
         </li>
         `    
     })
