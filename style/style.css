@@ -29,7 +29,7 @@ html {
     border: none;
     color: var(--light-color-primary);
     box-shadow: 3px 3px 6px -1px #111;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 .theme-mode {
     display: flex;
@@ -46,6 +46,7 @@ html {
 }
 .checkbox:hover {
     background-color: var(--green-color-secondary);
+    color: var(--light-color-primary-color-primary);
 }
 * {
     margin: 0;
