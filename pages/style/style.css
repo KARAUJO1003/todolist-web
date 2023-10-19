@@ -1,30 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-
-:root{
+:root {
     /*light-mode*/
     --dark-color-primary: #111;
-    --light-color-primary:#f0f9ff;
-    --light-color-secondary:#f0f8ff;
+    --light-color-primary: #f0f9ff;
+    --light-color-secondary: #f0f8ff;
     --green-color-primary: #2f4f4f;
     --green-color-secondary: #133030;
-    
+
     /*dark-mode*/
-    
 }
-
-html{
-    font-size: 62,5%;
+html {
+    font-size: 62, 5%;
 }
-
-[data-theme = "dar"]{
+[data-theme="dar"] {
     --ligth-color-primary: #141414;
     --ligth-color-secondary: #131313;
     --dark-color-primary: #f0f9ff;
-
 }
-
-.checkbox{
+.checkbox {
     background-color: var(--green-color-primary);
     width: 3rem;
     height: 3rem;
@@ -35,40 +29,35 @@ html{
     border: none;
     color: var(--light-color-primary);
     box-shadow: 3px 3px 6px -1px #111;
-    transition: .2s;
-
+    transition: 0.2s;
 }
-
-.theme-mode{
+.theme-mode {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     position: absolute;
     z-index: 8;
     right: 3rem;
     top: 2rem;
 }
-.theme-mode label{
+.theme-mode label {
     color: #eee;
 }
-
-.checkbox:hover{
+.checkbox:hover {
     background-color: var(--green-color-secondary);
 }
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     outline: none;
     text-decoration: none;
     list-style: none;
     --webkit-font-smoothing: antialiased;
 }
-
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,182 +65,159 @@ body{
     color: var(--dark-color-primary);
     overflow-y: hidden;
 }
-
-.imgBackground{
+.imgBackground {
     width: 100%;
     height: 300px;
-    background:  url("./src/background.png") no-repeat;
+    background: url("../src/background.png") no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
     color: var(--light-color-primary);
     z-index: 1;
 }
-.imgBackground span{
+.imgBackground span {
     color: var(--green-color-primary);
     font-weight: 700;
 }
-
-.imgBackground h1{
+.imgBackground h1 {
     color: #f0f8ff;
     margin-top: 120px;
     font-size: 2rem;
 }
-
-
-.container{
+.container {
     top: 30%;
     position: absolute;
     width: 40%;
     min-width: 300px;
     padding: 1rem;
     background-color: var(--light-color-primary);
-    border-radius:30px;
+    border-radius: 30px;
     filter: drop-shadow(-1px 0px 6px rgba(0, 0, 0, 0.35));
     z-index: 3;
 }
-
-.inputTask{
+.inputTask {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
     margin-bottom: 2rem;
 }
-.inputTask input{
+.inputTask input {
     width: 100%;
     height: 2.5rem;
     padding-left: 1rem;
     border: none;
-    border-radius: 15px;
+    border-radius: 20px 0 0 20px;
     background-color: var(--light-color-secondary);
     color: var(--dark-color-primary);
     filter: drop-shadow(-1px 2px 6px rgba(0, 0, 0, 0.25));
     font-size: 1rem;
-    transition: .2s;
+    transition: 0.2s;
 }
-
-.inputTask input:focus{
+.inputTask input:focus {
     filter: drop-shadow(-1px 2px 6px rgba(0, 0, 0, 0.45));
-    
 }
-
-.addTaskBtn{
+.addTaskBtn {
     padding: 0 15px;
     font-size: 1rem;
     height: 2.5rem;
-    border-radius: 15px;
-    border: none;
-    background-color: var(--green-color-primary);
+    border-radius: 0 20px 20px 0;
+    border: 1px solid var(--green-color-secondary);
+    background: var(--green-color-primary);
     color: #fff;
-    transition: ease-in-out .2s;
+    transition: ease-in-out 0.2s;
     cursor: pointer;
 }
-
-.more{
+.more {
     display: none;
 }
-
-.addTaskBtn:hover{
+.addTaskBtn:hover {
     background-color: var(--green-color-secondary);
 }
-
-.listTasks{
+.listTasks {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap:.5rem;
+    gap: 0.5rem;
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 300px;
 }
-
-.listTasks::-webkit-scrollbar{
-width: 12px;
+.listTasks::-webkit-scrollbar {
+    width: 12px;
 }
-body::-webkit-scrollbar{width: 12px;}
-body::-webkit-scrollbar-track{background-color:var(--green-color-primary);}
-body::-webkit-scrollbar-thumb{background-color:var(--green-color-secondary);}
-
-
-
-.tasks{
-    gap: .5rem;
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--green-color-primary);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--green-color-secondary);
+}
+.tasks {
+    gap: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
     cursor: pointer;
-    transition: ease-in .1s;
-    border-radius:5px;
+    transition: ease-in 0.1s;
+    border-radius: 5px;
     box-sizing: border-box;
     border-bottom: 1px solid var(--dark-color-secondary);
-
 }
-
-.tasks:hover{
+.tasks:hover {
     transform: scale(1.01);
-
 }
-.tasks:active img{
+.tasks:active img {
     opacity: 1;
-
 }
-
 .tasks p {
-    width: 100%; /* Limita a largura máxima ao contêiner .tasks */
+    width: 100%;
+    /* Limita a largura máxima ao contêiner .tasks */
     word-wrap: break-word;
-    overflow: hidden; /* Evita que o texto exceda a largura do contêiner */
-    white-space: wrap; /* Impede que o texto quebre em várias linhas horizontalmente (pode ser removido se desejado) */
-    text-overflow: ellipsis; 
-    font-size: 1rem;/* Adiciona "..." no final do texto se ele for cortado (pode ser removido se desejado) */
-  }
-
- img{
+    overflow: hidden;
+    /* Evita que o texto exceda a largura do contêiner */
+    white-space: wrap;
+    /* Impede que o texto quebre em várias linhas horizontalmente (pode ser removido se desejado) */
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    /* Adiciona "..." no final do texto se ele for cortado (pode ser removido se desejado) */
+}
+img {
     width: 1.2rem;
     height: 1.2rem;
     cursor: pointer;
 }
-
-.check-icon path{
+.check-icon path {
     fill: var(--dark-color-primary);
     stroke-width: 1;
     padding: 1rem;
-    margin:0;
-    opacity: .8;
+    margin: 0;
+    opacity: 0.8;
 }
-
-.verde path{
+.verde path {
     fill: rgb(104, 184, 89);
     opacity: 1;
 }
-
-
-.delete-icon{
+.delete-icon {
     opacity: 0;
-    transition: ease-in-out .2s;
+    transition: ease-in-out 0.2s;
 }
-
-.tasks:hover .delete-icon{
+.tasks:hover .delete-icon {
     opacity: 1;
 }
-
-
-.feito{
+.feito {
     text-decoration: line-through;
 }
-
-.feito p{
-    opacity: .5;
+.feito p {
+    opacity: 0.5;
 }
-
-
-dialog::backdrop{
+dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.65);
     position: relative;
 }
-
-dialog{
+dialog {
     width: 400px;
     position: absolute;
     top: 50%;
@@ -263,110 +229,101 @@ dialog{
     border-radius: 1rem;
     color: var(--dark-color-primary);
     background-color: var(--light-color-primary);
-
 }
-
-dialog button{
+dialog button {
     border: none;
     padding: 10px 15px;
     width: 100%;
     margin-top: 2rem;
     border-radius: 1rem;
     font-weight: 700;
-    font-size: .9rem;
+    font-size: 0.9rem;
     background-color: var(--green-color-primary);
     cursor: pointer;
     color: var(--dark-color-primary);
-    transition: .2s;
+    transition: 0.2s;
 }
-
-dialog button:hover{
+dialog button:hover {
     background-color: var(--green-color-secondary);
 }
-
-dialog p{
-    margin-top: .8rem;
+dialog p {
+    margin-top: 0.8rem;
 }
-dialog h2{
+dialog h2 {
     color: var(--dark-color-secondary);
 }
-
-@media  (max-width: 1024px) {
-    .container{
+@media (max-width: 1024px) {
+    .container {
         top: 30%;
         width: 90%;
     }
 }
-
-@media (max-width: 425px){
-    html{
+@media (max-width: 425px) {
+    html {
         font-size: 90%;
     }
 
-    .imgBackground{
+    .imgBackground {
         height: 200px;
     }
 
-    .imgBackground h1{
+    .imgBackground h1 {
         margin-top: 50px;
     }
 
-
-    .container{
+    .container {
         top: 25%;
         padding: 1rem;
-
     }
 
     .inputTask {
         margin-bottom: 1rem;
         top: 15;
         width: 100%;
-        gap: .5rem;
+        gap: 0.5rem;
     }
 
-    .inputTask input{
+    .inputTask input {
         width: 100%;
-
     }
 
-    .addTaskBtn button{
+    .addTaskBtn button {
         position: absolute;
         right: 0;
         transform: translate(-50% -50%);
     }
 
-    .adicionar{
-    display: none;
+    .adicionar {
+        display: none;
     }
 
-    .more{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    .more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
     }
 
-    .more svg{
+    .more svg {
         width: 1.5rem;
         color: #fff;
         height: 1.5rem;
         z-index: 5;
     }
 
-    .theme-mode{
+    .theme-mode {
         position: absolute;
         z-index: 8;
         right: 1rem;
         top: 1rem;
     }
 
-    .checkbox{
+    .checkbox {
         width: 2.5rem;
         height: 2.5rem;
     }
 
-    .theme-mode label{
+    .theme-mode label {
         display: none;
     }
 }
