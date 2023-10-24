@@ -40,7 +40,7 @@ html {
     right: 3rem;
     top: 2rem;
 }
-.theme-mode p {
+.theme-mode label {
     color: #eee;
 }
 .checkbox:hover {
