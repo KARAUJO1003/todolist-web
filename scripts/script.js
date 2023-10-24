@@ -1,7 +1,7 @@
 const button = document.querySelector('.addTaskBtn')
 const input = document.querySelector ('.input-task')
 const listaCompleta = document.querySelector ('.listTasks') 
-const checkBoxMode = document.getElementById("#check-box-theme")
+const checkBoxMode = document.getElementById("check-box-theme")
 const themeSystem = localStorage.getItem("themeSystem") || "light"
 const modal = document.querySelector('dialog')
 const modalClose = document.querySelector('dialog button')
@@ -102,7 +102,7 @@ function showTask (){
         <li class="tasks ${item.done && "feito"}">
             <span class="check-icon ${item.done && "verde"}"  onclick="checkTask(${index})">${iconSrc}</span>
             <p>${item.tarefa}</p>
-            <img class="delete-icon" src="../pages/src/delete.png" alt="unCheck-icon" onclick="deletarItem(${index})">
+            <img class="delete-icon" src="pages/src/delete.png" alt="unCheck-icon" onclick="deletarItem(${index})">
         </li>
         `    
     })

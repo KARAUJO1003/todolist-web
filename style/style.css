@@ -19,7 +19,6 @@ html {
     --dark-color-primary: #f0f9ff;
 }
 .checkbox {
-    background-color: var(--green-color-primary);
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -28,7 +27,7 @@ html {
     justify-content: center;
     border: none;
     color: var(--light-color-primary);
-    box-shadow: 3px 3px 6px -1px #111;
+    background: transparent;
     transition: 0.5s;
 }
 .theme-mode {
@@ -41,11 +40,10 @@ html {
     right: 3rem;
     top: 2rem;
 }
-.theme-mode label {
+.theme-mode p {
     color: #eee;
 }
 .checkbox:hover {
-    background-color: var(--green-color-secondary);
     color: var(--light-color-primary-color-primary);
 }
 * {
