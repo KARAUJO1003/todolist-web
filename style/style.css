@@ -279,7 +279,7 @@ dialog h2 {
         margin-bottom: 1rem;
         top: 15;
         width: 100%;
-        gap: 0.5rem;
+        gap: 0rem;
     }
 
     .inputTask input {
